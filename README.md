@@ -9,22 +9,22 @@ A container which has some tools install to debug your kubernetes and openshift 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: network-tools
+  name: network-tool
   labels:
-    app: network-tools
+    app: network-tool
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: network-tools
+      app: network-tool
   template:
     metadata:
       labels:
-        app: network-tools
+        app: network-tool
     spec:
       containers:
-      - name: network-tools
-        image: palo/network-tools:latest
+      - name: network-tool
+        image: palo/network-tool:latest
         args: [ "ping", "-c 10", "google.com" ]
 ```
 
