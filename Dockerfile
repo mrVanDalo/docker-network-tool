@@ -1,11 +1,12 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
-  telnet \
+  dnsutils \
   inetutils-ping \
   netcat \
   nmap \
-  dnsutils
+  postgresql-client \
+  telnet
 
 
 
