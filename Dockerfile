@@ -8,5 +8,7 @@ RUN apt-get update && apt-get install -y \
   postgresql-client \
   telnet
 
+RUN useradd --uid=1001 tool
+USER tool
 
 
